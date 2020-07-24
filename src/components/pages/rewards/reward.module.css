@@ -1,0 +1,103 @@
+h4{
+   font-size: 16px;
+   font-weight: 300;
+   color: #9013fe;
+   display: inline-block;
+}
+
+
+div.userImputContainer{
+   margin-top: 50px;
+}
+
+div.userImputContainer .timeArea{
+   width: 100px;
+   text-align: center;
+   display: inline-block;
+   margin-right: 16px;
+}
+
+
+
+.timeInputContainer{
+   border: 2px solid #9013fe;
+   border-radius: 4px
+}
+
+
+.timeInputContainer > .first{
+   width: 50%;
+   display: inline-block;
+   text-align: center
+}
+
+.timeInputContainer > .first > input {
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   padding: 8;
+   border: none
+}
+
+.timeInputContainer > .secound{
+   width: 50%;
+   display: inline-block;
+   text-align: center;
+   background: #c290ee;
+   padding: 8px
+}
+
+.timeInputContainer > .secound > span {
+   color: #880df3;
+   font-weight: 500
+}
+
+.descriptionArea {
+   width: 85%;
+   display: inline-block;
+}
+
+
+
+.flexAndCenter{
+   display: 'flex';
+   align-items: 'center'
+}
+
+.rewardTitle{
+   display : 'inline-block';
+   color: #9013fe;
+   margin: 0px auto 0px  0px;
+}
+
+
+.contentItemsCenter{
+   display: flex;
+   align-items: center;
+}
+
+.descriptionArea > .contentItemsCenter > input {
+   /* border: 2px solid #9013fe; */
+   border-radius: 4px;
+   width: 95%; 
+   padding: 8px;
+}
+
+.trash {
+   margin-left: 10px;
+   width: 36px;
+   height: 36px;
+   display: inline-block;
+   background: url('./images/trash-bin.png');
+}
+
+.trash:hover {
+   background: url('./images/trash-bin-dark.png');
+   cursor: pointer;
+}
+.save{
+   font-size: 2em;
+   margin: 0 5px;
+   color:var(--mainColor);
+   cursor: pointer;
+}

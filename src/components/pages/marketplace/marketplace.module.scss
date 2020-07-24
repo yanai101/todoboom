@@ -1,0 +1,33 @@
+.header{
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 300px 150px;
+    grid-column-gap: 15px;
+    align-items: end;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 3;
+    color: var(--filterColor);
+    .search {
+        width: 300px;
+        border:solid 2px var(--mainColor);
+        border-radius: 5px;
+        display:flex;
+        align-items: center;
+        input{
+            border: none;
+        }
+
+    }
+    small {
+        color: var(--mainColor);
+        font-size: 0.9rem;
+    }
+}
+
+.activities{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}

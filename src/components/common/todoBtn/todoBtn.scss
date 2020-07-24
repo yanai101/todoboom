@@ -1,0 +1,42 @@
+.todoBtn{
+    width: 168px;
+    height: 40px;
+    background-color: var(--mainColor);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid var(--mainColor);
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    &.small{
+        width: 110px;
+        height: 26px;
+    }
+    &.medium{
+
+    }
+    &.large{
+        
+    }
+
+    &:hover{
+        color: var(--mainColor);
+        background-color: #fff;
+        text-decoration: none;
+
+    }
+
+    &.revese{
+        color: var(--mainColor);
+        background-color: #fff;
+
+        &:hover{
+            background-color: var(--mainColor);
+            color: #fff;
+        }
+    }
+
+}

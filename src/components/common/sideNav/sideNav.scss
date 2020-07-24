@@ -1,0 +1,59 @@
+.sideNav{
+    height: 100vh;
+    width: 80px;
+    background-image: linear-gradient(to bottom, #0097d9 15%, #5615b6);
+    position: fixed;
+    z-index: 8;
+    .logo{
+        width: 122px;
+        left: -19px;
+        position: relative;
+        top: -25px;
+    }
+    .sideNavIcon{
+        font-size: 40px;
+        color: #fff;
+    }
+    .actions{
+        position: absolute;
+        top: calc(50vh - 165px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 205px;
+        justify-content: space-between;
+        .linkNav{
+            width: 80px;
+            text-align: center;
+            display: block;
+            position: relative;
+            opacity: 0.4;
+            &.active{
+                opacity: 1;
+            }
+            &:hover{
+                opacity: 1;
+            }
+        }
+        .activeIcon{
+            position: absolute;
+            right: -11px;
+            font-size: 30px;
+            top: 20px;
+            opacity: 1;
+        }
+    }
+
+    .setting{
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+        opacity: 0.5;
+        transform: rotate(180deg);
+        cursor: pointer;
+        opacity: .4;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,156 @@
+.filterContainer{
+    --startPos : -385px;
+    --endPos: -37px;
+
+    position: fixed;
+    width: 350px;
+    padding:15px;
+    height: 100vh;
+    border: 1px solid var(--filterColor);
+    top: 0;
+    transform: translateX(var(--startPos));
+    z-index: 5;
+    background: #fff;
+    transition: transform 0.5s ease;
+
+    .heandle{
+        background:#fff;
+        width: 24px;
+        height: 120px;
+        position: absolute;
+        right: -25px;
+        top: calc(50vh - 60px);
+        overflow: hidden;
+        span{
+            display: block;
+            background: var(--filterColor);
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            transform: rotate(45deg);
+            top: -15px;
+            left: -120px;
+            cursor: pointer;
+            .faArrow{
+                color: #fff;
+                position: absolute;
+                left: 107px;
+                top: 28px;
+                transform: rotate(133deg);
+                transition: transform 0.5s ease;
+                &.open{
+                    transform: rotate(313deg);
+                }
+            }
+        }
+    }
+
+    &.open{
+        transform:translateX(var(--endPos))
+    }
+    .filters{
+        color: var(--mainColor);
+        h6{
+            margin-top:30px;
+        }
+
+        .filterCat{
+            position: relative;
+            color: #fff;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            width: calc(100% + 30px);
+            left: -15px;
+            padding: 15px;
+        }
+
+        label{
+            position: relative;
+            margin-bottom: 0;
+            .checkboxV{
+                position: absolute;
+                left: 20px;
+                opacity: 1;
+                transition: opacity 0.3s ease;
+            }
+            &::before{
+                content: "";
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                border: 1px solid #fff;
+                margin-right: 10px;
+            }
+        }
+
+        input[type=checkbox] {
+            opacity: 0;
+            &:checked + .checkboxV{
+                opacity: 0;
+            }
+        }
+    }
+
+    .rangeInput{
+        position: relative;
+        &::before{
+            content: attr(aftermin);
+            position: absolute;
+            left:0px;
+            top: 30px;
+        }
+        &::after{
+            content: attr(aftermax);
+            position: absolute;
+            right:0px;
+            top: 30px;
+        }
+
+        .rangeStyle{
+            &::before{
+                content: attr(aftermin);
+                position: absolute;
+                left: 40%;
+                top: 15px
+            }
+            &::after{
+                content: attr(aftermax);
+                position: absolute;
+                left: 50%;
+                top: 15px
+            }   
+        }
+    }
+
+    .ageRange{
+        position: relative;
+        &::before{
+            content: attr(aftermin);
+            position: absolute;
+            left:0px;
+            top: 30px;
+        }
+        &::after{
+            content: attr(aftermax);
+            position: absolute;
+            right:0px;
+            top: 30px;
+        }
+        .rangeStyle{
+            &::before{
+                content: attr(aftermin);
+                position: absolute;
+                left: 40%;
+                top: 15px
+            }
+            &::after{
+                content: attr(aftermax);
+                position: absolute;
+                left: 50%;
+                top: 15px
+            }   
+        }
+
+    }
+}

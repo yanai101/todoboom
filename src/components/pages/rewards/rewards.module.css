@@ -1,0 +1,55 @@
+h1{
+  font-family: 'Quicksand';
+  font-size: 50px;
+  font-weight: 500;
+  color: #284355;
+  line-height: 1.2
+}
+
+
+h2{
+    color: #9013fe4f;
+    margin: 0;
+ 
+}
+.header{
+    /* padding: 25px 0 0px 0;
+    font-size: 44px;
+    font-weight: 400; */
+    color:var(--filterColor);
+    padding: 25px;
+    z-index: 3;
+    color: var(--filterColor);
+}
+.subHeader{
+    display: block;
+    color: var(--mainColor);
+    font-size: 0.9rem;
+}   
+
+
+.contentItemsCenter{
+    display: flex;
+    align-items: center;
+ }
+
+
+.plus{
+    width: 130px;
+    height: 130px;
+    background: url('./images/plus-xl.png') center;
+    margin: 0 auto;
+}
+
+.plus:hover{
+    background: url('./images/plus-dark-xl.png') center;
+    cursor: pointer;
+}
+
+.newRewardArea:hover{
+    cursor: pointer;
+}
+
+.newRewardArea:hover > .plus{
+    background: url('./images/plus-dark-xl.png') center;
+}

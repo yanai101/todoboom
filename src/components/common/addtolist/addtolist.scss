@@ -1,0 +1,82 @@
+.addtolist{
+    position: absolute;
+    width: 210px;
+    padding: 10px 15px;
+    background: #fff;
+    z-index: 10;
+    border: 1px solid var(--mainColor);
+    border-radius: 4px;
+    color: var(--mainColor);
+    
+    h6 {
+        display:flex;
+        justify-content:space-between;
+        align-items: center;
+        svg{
+            font-size: 2.2rem;
+            cursor: pointer;
+        }
+    }
+
+
+
+    .addListItem{
+        margin-top: 15px;
+        color: var(--mainTextColor);
+        display:flex;
+        align-items: center;
+        cursor: pointer;
+        svg{
+            opacity: 0.8;
+            margin-right: 5px;
+        }
+    }
+
+    input{
+        margin-top: 15px;
+    }
+
+    .inListCheckbox{
+        position: relative;
+        padding-left: 15px;
+
+        .checkboxV{
+            position: absolute;
+            left: -7px;
+            top: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        label {
+            display: inline-block;
+            cursor: pointer;
+            padding: 0;
+            color: var(--mainTextColor);
+            &::after{
+                position: absolute;
+                border: 1px solid var(--mainColor);
+                left: -9px;
+                width: 20px;
+                height: 20px;
+                border-radius: 5px;
+                top: 3px;
+                content:'';
+            }
+            
+        }
+        input[type=checkbox]{
+            position: absolute;
+            left: -8px;
+            top: -6px;
+            width: 20px;
+            height: 30px;
+            opacity: 0;
+        
+            &:checked + .checkboxV{
+                opacity: 1;
+            }
+        }
+
+    }
+}

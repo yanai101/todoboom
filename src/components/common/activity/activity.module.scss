@@ -1,0 +1,108 @@
+.activityBox{
+    width: 250px;
+    height: 250px;
+    border: solid 10px rgba(144, 19, 254, 0.10);
+    border-radius: 50%;
+    position: relative;
+    margin: 30px;
+
+
+    .time{
+        position: absolute;
+        width: 46px;
+        height: 46px;
+        background:#fff;
+        text-align: center;
+        color: var(--mainColor);;
+        border-radius: 50%;
+        border: solid 3px var(--mainColor);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 12px;
+        z-index: 2;
+        top: -30px;
+        left: 90px;
+        cursor: pointer;
+
+        span:nth-child(2){
+            display:none;
+        }
+
+        time{
+            display: block;
+            margin: 2px;
+        }
+
+        &:hover{
+            background:var(--mainColor);
+            color: #fff;
+
+            span:nth-child(1){
+                display:none;
+            }   
+            span:nth-child(2){
+                display:block;
+            }   
+        }
+    }
+    
+    .svgTime{
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        left: -10px;
+        transform: rotate(-90deg);
+        circle{
+            fill: none;
+            stroke: var(--mainColor);
+            stroke-width:10px;
+            stroke-dasharray: 1000;
+            transition: all 0.9s ease-in-out;
+        }
+    }
+
+    .details{
+        overflow: hidden;
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        display: grid;
+        position: relative;
+        z-index: 1;
+        grid-template-areas: 'img'
+                            'details' 
+                            'more';
+            .imagePlaceholder{
+                grid-area: img;
+                width: 100%;
+                height: 120px;
+                background-size: cover;
+            }
+
+            .description{
+                color: #fff;
+                grid-area: details;
+                width: 100%;
+                height: 70px;
+                text-align: center;
+                padding: 0 31px;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .more{
+                grid-area: more;
+                height: 45px;
+                padding-top: 5px;
+                width: 100%;
+                text-align: center;
+                font-weight: bolder;
+                cursor: pointer;
+            }
+        }
+}
